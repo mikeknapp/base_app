@@ -1,0 +1,28 @@
+{
+  "name": "base_app",
+  "private": true,
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.15",
+    "parcel": "^2.9.3",
+    "postcss": "^8.4.28",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "firebase": "^10.2.0",
+    "flowbite": "^1.8.1",
+    "flowbite-react": "^0.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0"
+  }
+}
