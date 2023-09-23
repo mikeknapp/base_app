@@ -4,20 +4,20 @@
 // List exports in this file from least dependent to most dependent.
 
 // Consts.
-export * from "./consts";
+export * from "./consts"
 
 // Utils.
 
 // Models.
 
 // Components.
-export * from "./components/nav/AuthenticatedPageWrapper";
+export * from "./components/nav/AuthenticatedPageWrapper"
 
 // Finally, Pages and AppRouter.
-export * from "./pages/Error404Page";
-export * from "./pages/HomePage";
-export * from "./pages/LoginPage";
+export * from "./pages/Error404Page"
+export * from "./pages/HomePage"
+export * from "./pages/LoginPage"
 
 
-export * from "./AppRouter";
+export * from "./AppRouter"
 

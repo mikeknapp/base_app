@@ -1,6 +1,6 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import * as app from "./exports";
+import React from "react"
+import { Route, Routes } from "react-router-dom"
+import * as app from "./exports"
 
 export function AppRouter() {
   return (
