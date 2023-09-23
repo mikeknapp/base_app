@@ -6,7 +6,8 @@
     "start": "yarn clean && parcel",
     "build": "yarn clean && yarn tscheck && parcel build",
     "tscheck": "yarn tsc --noEmit",
-    "clean": "rimraf dist .parcel-cache"
+    "clean": "rimraf dist .parcel-cache",
+    "deploy": "firebase deploy"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {

@@ -12,10 +12,19 @@ My starting point for React development using TypeScript, Firebase, Tailwind CSS
 6. Install Yarn `npm install --global yarn`, if not already installed
 7. `yarn install` to grab all required dependencies
 8. Start Parcel: `yarn start`
-9. Visit http://localhost:1234 in your browser
-10. Your browser will automatically update as you make edits to the code
-11. Make your initial commit
-12. `yarn upgrade --latest` to upgrade all required dependencies and check everything works ok
+9. Go to https://console.firebase.google.com/ and set up a new Firebase project
+10. Create a new web config, and copy the config values to `src/firebase.ts`
+11. Inside Firebase, enable Google login
+12. Inside Firebase, setup Firestore
+13. Go to your Firebase settings:
+    ![Firebase settings](./docs/project-settings.png "Project Settings")
+14. Set your project location (mirror where you selected Firebase to be setup):
+    ![Firebase project location](./docs/project-location.png "Project Location")
+15. Edit `.firebaserc` and update the project name
+16. Visit http://localhost:1234 in your browser
+17. Your browser will automatically update as you make edits to the code
+18. Make your initial commit
+19. `yarn upgrade --latest` to upgrade all required dependencies and check everything works ok
 
 ## Customizing
 

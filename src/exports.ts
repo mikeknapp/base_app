@@ -10,6 +10,7 @@ export * from "./lib/utils"
 export * from "./state/store"
 
 // Models.
+export * from "./models/FirebaseUser"
 
 // Components.
 export * from "./components/nav/AuthenticatedPageWrapper"

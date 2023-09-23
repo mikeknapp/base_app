@@ -35,6 +35,14 @@
     @apply w-full;
     @apply h-full;
   }
+
+  h1 {
+    @apply text-lg;
+    @apply font-semibold;
+    @apply text-gray-800;
+    @apply dark:text-gray-100;
+    @apply mb-3;
+  }
 }
 
 @tailwind components;
