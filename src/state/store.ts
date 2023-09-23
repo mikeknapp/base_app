@@ -35,3 +35,9 @@ export const nonReactClearStore = () => {
     useAppStore.getState().clearStore()
   })
 }
+
+export const nonReactSetIsLoggedIn = (isLoggedIn: boolean) => {
+  unstable_batchedUpdates(() => {
+    useAppStore.getState().setLoggedIn(isLoggedIn)
+  })
+}

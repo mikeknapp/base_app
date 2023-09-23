@@ -1,5 +1,6 @@
 import { getAnalytics } from "firebase/analytics"
 import { initializeApp } from "firebase/app"
+import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
 
 // TODO: Replace the following with your app's Firebase project configuration
@@ -10,9 +11,10 @@ const firebaseConfig = {
   storageBucket: "XXXXXXX",
   messagingSenderId: "XXXXXXX",
   appId: "XXXXXXX",
-  measurementId: "XXXXXXX"
+  measurementId: "XXXXXXX",
 }
 
 export const app = initializeApp(firebaseConfig)
 export const analytics = getAnalytics(app)
 export const db = getFirestore(app)
+export const auth = getAuth(app)
