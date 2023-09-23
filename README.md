@@ -5,15 +5,17 @@ My starting point for React development using TypeScript, Firebase, Tailwind CSS
 ## Getting Started
 
 1. Clone this repo: `git clone git@github.com:mikeknapp/base_app.git`
-2. Rename directory to your liking.
+2. Rename directory to your liking
 3. `cd <dir name>`
 4. Delete .git folder, then `git init`
-5. [Install Node.js](https://nodejs.org/en/download), if not already installed.
-6. Install Yarn `npm install --global yarn`, if not already installed.
+5. [Install Node.js](https://nodejs.org/en/download), if not already installed
+6. Install Yarn `npm install --global yarn`, if not already installed
 7. `yarn install` to grab all required dependencies
 8. Start Parcel: `yarn start`
 9. Visit http://localhost:1234 in your browser
-10. Your browser will automatically update as you make edits to the code.
+10. Your browser will automatically update as you make edits to the code
+11. Make your initial commit
+12. `yarn upgrade --latest` to upgrade all required dependencies and check everything works ok
 
 ## Customizing
 
