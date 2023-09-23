@@ -4,7 +4,8 @@
   "source": "src/index.html",
   "scripts": {
     "start": "yarn clean && parcel",
-    "build": "yarn clean && parcel build",
+    "build": "yarn clean && yarn tscheck && parcel build",
+    "tscheck": "yarn tsc --noEmit",
     "clean": "rimraf dist .parcel-cache"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
@@ -12,12 +13,21 @@
     "@babel/core": "^7.22.10",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
     "autoprefixer": "^10.4.15",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.33.2",
     "parcel": "latest",
     "postcss": "^8.4.28",
     "process": "^0.11.10",
     "rimraf": "^5.0.1",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "typescript": "*"
   },
   "dependencies": {
     "firebase": "^10.2.0",
