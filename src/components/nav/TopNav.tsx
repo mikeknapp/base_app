@@ -1,13 +1,16 @@
 import { Navbar } from "flowbite-react"
 import React from "react"
-import { TopNavBrand, UserDropdownMenu } from "../../exports"
+import { MobileMenu, TopNavBrand, UserDropdownMenu } from "../../exports"
 
 export function TopNav(props: { children: React.ReactNode }) {
   return (
     <div className="w-screen h-screen">
       <Navbar id="top-nav" fluid>
         <TopNavBrand />
-        <UserDropdownMenu />
+        <div className="flex flex-row gap-2">
+          <UserDropdownMenu />
+          <MobileMenu />
+        </div>
       </Navbar>
       <div className="top-nav-offset">{props.children}</div>
     </div>
