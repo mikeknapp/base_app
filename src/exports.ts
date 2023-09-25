@@ -18,6 +18,8 @@ export * from "./components/nav/TopNav"
 export * from "./components/nav/TopNavBrand"
 export * from "./components/nav/UserDropdownMenu"
 export * from "./components/spinners/BouncingIcon"
+export * from "./components/spinners/TableLoading"
+export * from "./components/spinners/TextLoading"
 
 // Finally, Pages and AppRouter.
 export * from "./pages/Error404Page"

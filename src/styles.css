@@ -1,5 +1,9 @@
 @tailwind base;
 
+:root {
+  --topNavHeight: 60px;
+}
+
 @layer base {
   * {
     @apply box-border;
@@ -16,15 +20,45 @@
     @apply overflow-hidden;
     @apply bg-slate-50;
     @apply text-gray-800;
-    @apply dark:bg-slate-800;
-    @apply dark:text-gray-100;
   }
 
   #app {
     @apply flex;
     @apply flex-col;
+    @apply w-screen;
+    @apply h-screen;
+    @apply overflow-hidden;
+  }
+
+  #top-nav {
+    height: var(--topNavHeight);
+    @apply fixed;
+    @apply top-0;
+    @apply left-0;
+    @apply w-full;
+    @apply bg-slate-700;
+    @apply text-white;
+  }
+
+  .top-nav-offset {
+    margin-top: var(--topNavHeight);
+    padding-bottom: var(--topNavHeight);
+    @apply flex;
+    @apply flex-row;
     @apply w-full;
     @apply h-full;
+  }
+
+  .content-wrapper {
+    @apply flex;
+    @apply flex-col;
+    @apply flex-1;
+    @apply p-2;
+    @apply w-full;
+    @apply h-full;
+    @apply overflow-auto;
+    @apply max-w-5xl;
+    @apply mx-auto;
   }
 
   .centered-container {
@@ -42,6 +76,10 @@
     @apply text-gray-800;
     @apply dark:text-gray-100;
     @apply mb-3;
+  }
+
+  p {
+    @apply mb-4;
   }
 }
 

@@ -28,10 +28,9 @@ export function AuthenticatedPageWrapper(props: { children: React.ReactNode }) {
   }, [isSignedIn])
 
 
-  return <div className="w-full h-full">
+  return <div className="flex flex-row w-full h-full">
     {!isInitialized ? <BouncingIcon /> : <>
-      {renderNav && <TopNav />}
-      {props.children}
+      {renderNav ? <TopNav>{props.children}</TopNav> : props.children}
     </>
     }
   </div>
