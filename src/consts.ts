@@ -1,3 +1,5 @@
+export const appName = "Base App"
+
 export const loginUrl = "/"
 export const homeUrl = "/home"
 

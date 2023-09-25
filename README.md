@@ -28,10 +28,12 @@ My starting point for React development using TypeScript, Firebase, Tailwind CSS
 
 ## Customizing
 
-1. Replace the favicon.ico in `/src/images`
-2. Add a page title to `/src/index.html`
-3. (Optional) change the Google font from Open Sans in `/src/index.html` and `/src/styles.css`
-4. Add your Firebase config to `src/firebase.ts`
+1. Replace `favicon.ico`, `social-share.png` and `icon.svg` in `/src/images`
+2. Update consts in `/src/consts.ts`, i.e. `appName`
+3. Add a page title, theme color, OG share info etc to `/src/index.html`
+4. (Optional) change the Google font from Open Sans in `/src/index.html` and `/src/styles.css`
+5. Replace the Firebase config in `src/firebase.ts` with your own
+6. Find icons here [FeatherIcons](https://feathericons.com/) or [HeroIcon](https://heroicons.com/). Download as SVG, rather than using `react-icons`, as this bloats the build size.
 
 ## Deploying
 
