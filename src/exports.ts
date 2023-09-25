@@ -14,6 +14,10 @@ export * from "./models/FirebaseUser"
 
 // Components.
 export * from "./components/nav/AuthenticatedPageWrapper"
+export * from "./components/nav/TopNav"
+export * from "./components/nav/TopNavBrand"
+export * from "./components/nav/UserDropdownMenu"
+export * from "./components/spinners/BouncingIcon"
 
 // Finally, Pages and AppRouter.
 export * from "./pages/Error404Page"

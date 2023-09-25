@@ -17,7 +17,7 @@ export function LoginPage() {
     }
   }
 
-  return <div className="center-container">
+  return <div className="centered-container">
     <h1>Login</h1>
 
     <Button onClick={() => signInWith(FirebaseAuthProvider.Google)}>Login with Google</Button>

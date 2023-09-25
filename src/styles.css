@@ -27,7 +27,7 @@
     @apply h-full;
   }
 
-  .center-container {
+  .centered-container {
     @apply flex;
     @apply flex-col;
     @apply items-center;

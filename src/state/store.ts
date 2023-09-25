@@ -3,8 +3,8 @@ import { create } from "zustand"
 import { createJSONStorage, devtools, persist } from "zustand/middleware"
 
 export interface AppState {
-  loggedIn: boolean
-  setLoggedIn: (loggedIn: boolean) => void
+  isSignedIn: boolean
+  setIsSignedIn: (isSignedIn: boolean) => void
 
   clearStore: () => void
 }
@@ -13,12 +13,12 @@ export const useAppStore = create<AppState>()(
   devtools(
     persist(
       (set) => ({
-        loggedIn: false,
-        setLoggedIn: (loggedIn: boolean) => set(() => ({ loggedIn: loggedIn })),
+        isSignedIn: false,
+        setIsSignedIn: (loggedIn: boolean) => set(() => ({ isSignedIn: loggedIn })),
 
         clearStore: () => {
           set(() => ({
-            loggedIn: false,
+            isSignedIn: false,
           }))
         },
       }),
@@ -36,8 +36,8 @@ export const nonReactClearStore = () => {
   })
 }
 
-export const nonReactSetIsLoggedIn = (isLoggedIn: boolean) => {
+export const nonReactSetIsSignedIn = (isSignedIn: boolean) => {
   unstable_batchedUpdates(() => {
-    useAppStore.getState().setLoggedIn(isLoggedIn)
+    useAppStore.getState().setIsSignedIn(isSignedIn)
   })
 }

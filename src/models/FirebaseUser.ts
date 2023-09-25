@@ -1,6 +1,6 @@
 import { AuthProvider, GoogleAuthProvider, OAuthProvider, signInWithPopup, User } from "firebase/auth"
 import { createContext } from "react"
-import { auth, DevLog, nonReactClearStore, nonReactSetIsLoggedIn } from "../exports"
+import { auth, DevLog, nonReactClearStore, nonReactSetIsSignedIn } from "../exports"
 
 
 export enum FirebaseAuthProvider {
@@ -24,12 +24,12 @@ class FirebaseUser {
     }
   }
 
-  isSignedIn(): boolean {
+  get isSignedIn(): boolean {
     return this.user !== null
   }
 
   get user(): User | null {
-    return auth.currentUser
+    return auth.currentUser || null
   }
 
   get userId(): string {
@@ -45,7 +45,7 @@ class FirebaseUser {
   }
 
   get profileUrl(): string | undefined {
-    if (this.isSignedIn()) {
+    if (this.isSignedIn) {
       return this.user?.photoURL || undefined
     }
     return undefined
@@ -62,8 +62,8 @@ class FirebaseUser {
 
   async onAuthStateChanged(user: User): Promise<void> {
     const isSignedIn = user !== null
-    DevLog("user is signed in: " + isSignedIn + ": user object " + user)
-    nonReactSetIsLoggedIn(isSignedIn)
+    DevLog("user is signed in: " + isSignedIn + " User = " + user)
+    nonReactSetIsSignedIn(isSignedIn)
     this.initialized = true
   }
 
