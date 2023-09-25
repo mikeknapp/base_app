@@ -79,20 +79,8 @@ class FirebaseUser {
       default:
         throw new Error("Unknown auth provider")
     }
-
     try {
-      const result = await signInWithPopup(auth, provider)
-      // TODO: Clean up.
-      // if (result.user) {
-      //   //const resp: { data: { success: boolean; error: string | null } } = await authorizeFxn()
-      //   //const outcome = resp.data
-      //   // if (!outcome.success) {
-      //   //   this.signOut()
-      //   //   alert(outcome.error || "Unauthorized")
-      //   //   return false
-      //   // }
-
-      // }
+      await signInWithPopup(auth, provider)
       this.initialized = true
       return this.user !== null
     } catch (error) {

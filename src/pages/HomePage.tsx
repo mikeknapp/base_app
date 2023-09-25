@@ -11,7 +11,7 @@ export function HomePage() {
     return () => clearTimeout(timer)
   }, [])
 
-  return <div className="content-wrapper">
+  return <div className="content-wrapper p-2">
     {isLoading ? <TextLoading /> : <>
       <h1>Welcome to the App</h1>
 

@@ -53,12 +53,9 @@
     @apply flex;
     @apply flex-col;
     @apply flex-1;
-    @apply p-2;
     @apply w-full;
     @apply h-full;
     @apply overflow-auto;
-    @apply max-w-5xl;
-    @apply mx-auto;
   }
 
   .centered-container {
