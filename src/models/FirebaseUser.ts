@@ -2,7 +2,6 @@ import { AuthProvider, GoogleAuthProvider, OAuthProvider, signInWithPopup, User 
 import { createContext } from "react"
 import { auth, DevLog, nonReactClearStore, nonReactSetIsSignedIn } from "../exports"
 
-
 export enum FirebaseAuthProvider {
   Google = "google.com",
   Microsoft = "microsoft.com",
@@ -68,7 +67,7 @@ class FirebaseUser {
   }
 
   async signInWith(authProvider: FirebaseAuthProvider): Promise<boolean> {
-    let provider: AuthProvider;
+    let provider: AuthProvider
     switch (authProvider) {
       case FirebaseAuthProvider.Google:
         provider = new GoogleAuthProvider()

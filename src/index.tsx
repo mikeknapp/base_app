@@ -13,5 +13,5 @@ root.render(
         <AppRouter />
       </Flowbite>
     </BrowserRouter>
-  </FirebaseUserContext.Provider>
+  </FirebaseUserContext.Provider>,
 )

@@ -11,7 +11,7 @@ const firebaseConfig = {
   storageBucket: "mike-base-app.appspot.com",
   messagingSenderId: "77492849661",
   appId: "1:77492849661:web:fd10093475f4fb8417a794",
-  measurementId: "G-X9HRGC7FCD"
+  measurementId: "G-X9HRGC7FCD",
 }
 
 export const app = initializeApp(firebaseConfig)

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   content: [
     "./src/**/*.{html,js,jsx,ts,tsx}",
@@ -8,11 +9,11 @@ module.exports = {
   theme: {
     fontSize: {
       "2xs": ".7rem",
-      "xs": ".9rem",
-      "sm": "1rem",
-      "base": "1.25rem",
-      "lg": "1.4rem",
-      "xl": "1.5rem",
+      xs: ".9rem",
+      sm: "1rem",
+      base: "1.25rem",
+      lg: "1.4rem",
+      xl: "1.5rem",
       "2xl": "1.9rem",
       "3xl": "2.4rem",
       "4xl": "3.rem",
@@ -41,6 +42,7 @@ module.exports = {
       },
     },
     variants: {},
+    // eslint-disable-next-line no-undef
     plugins: [require("flowbite/plugin")],
   },
-};
+}

@@ -22,22 +22,25 @@ export function LoginPage() {
     setIsSigningIn(false)
   }
 
-  return <>
-    {isSigningIn ? <BouncingIcon /> :
-      <div className="centered-container">
-        <h1>Login</h1>
+  return (
+    <>
+      {isSigningIn ? (
+        <BouncingIcon />
+      ) : (
+        <div className="centered-container">
+          <h1>Login</h1>
 
-        <Button color="gray" className="w-64 mt-3" onClick={() => signInWith(FirebaseAuthProvider.Google)}>
-          <GoogleLogo className="w-6 h-6 mr-2" />
-          Login with Google
-        </Button>
+          <Button color="gray" className="w-64 mt-3" onClick={() => signInWith(FirebaseAuthProvider.Google)}>
+            <GoogleLogo className="w-6 h-6 mr-2" />
+            Login with Google
+          </Button>
 
-        <Button color="gray" className="w-64 mt-3" onClick={() => signInWith(FirebaseAuthProvider.Google)}>
-          <MicrosoftLogo className="w-6 h-6 mr-2" />
-          Login with Microsoft
-        </Button>
-      </div>
-    }
-  </>
+          <Button color="gray" className="w-64 mt-3" onClick={() => signInWith(FirebaseAuthProvider.Google)}>
+            <MicrosoftLogo className="w-6 h-6 mr-2" />
+            Login with Microsoft
+          </Button>
+        </div>
+      )}
+    </>
+  )
 }
-

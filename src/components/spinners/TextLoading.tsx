@@ -1,13 +1,15 @@
-import React from "react";
+import React from "react"
 
 export function TextLoading() {
-  return <div role="status" className="w-full animate-pulse py-4">
-    <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-xl mb-2.5"></div>
-    <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span className="sr-only">Loading...</span>
-  </div>
+  return (
+    <div role="status" className="w-full animate-pulse py-4">
+      <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-xl mb-2.5"></div>
+      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+      <span className="sr-only">Loading...</span>
+    </div>
+  )
 }

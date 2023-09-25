@@ -6,7 +6,7 @@ export function AuthenticatedPageWrapper(props: { children: React.ReactNode }) {
   const user = useContext(FirebaseUserContext)
   const location = useLocation()
   const navigate = useNavigate()
-  const isSignedIn = useAppStore(state => state.isSignedIn)
+  const isSignedIn = useAppStore((state) => state.isSignedIn)
   const [renderNav, setRenderNav] = React.useState(false)
   const [isInitialized, setIsInitialized] = React.useState(false)
 
@@ -27,11 +27,9 @@ export function AuthenticatedPageWrapper(props: { children: React.ReactNode }) {
     }
   }, [isSignedIn])
 
-
-  return <div className="flex flex-row w-full h-full">
-    {!isInitialized ? <BouncingIcon /> : <>
-      {renderNav ? <TopNav>{props.children}</TopNav> : props.children}
-    </>
-    }
-  </div>
+  return (
+    <div className="flex flex-row w-full h-full">
+      {!isInitialized ? <BouncingIcon /> : <>{renderNav ? <TopNav>{props.children}</TopNav> : props.children}</>}
+    </div>
+  )
 }
