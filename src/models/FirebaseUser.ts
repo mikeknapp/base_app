@@ -62,7 +62,7 @@ class FirebaseUser {
 
   async onAuthStateChanged(user: User): Promise<void> {
     const isSignedIn = user !== null
-    DevLog("user is signed in: " + isSignedIn + " User = " + user)
+    DevLog(`user is signed in: ${isSignedIn ? user?.email : "false"}`)
     nonReactSetIsSignedIn(isSignedIn)
     this.initialized = true
   }
