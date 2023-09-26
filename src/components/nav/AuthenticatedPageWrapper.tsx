@@ -10,14 +10,7 @@ export function AuthenticatedPageWrapper(props: { children: React.ReactNode }) {
   const [renderNav, setRenderNav] = React.useState(false)
   const [isInitialized, setIsInitialized] = React.useState(false)
 
-  React.useEffect(() => {
-    user.awaitInitialized().then(() => {
-      setIsInitialized(true)
-      setRenderNav(isSignedIn)
-    })
-  }, [])
-
-  React.useEffect(() => {
+  function enforceLogin() {
     if (isSignedIn && location.pathname === loginUrl) {
       setRenderNav(isSignedIn)
       return navigate(homeUrl)
@@ -25,7 +18,19 @@ export function AuthenticatedPageWrapper(props: { children: React.ReactNode }) {
       setRenderNav(isSignedIn)
       return navigate(loginUrl)
     }
-  }, [isSignedIn])
+  }
+
+  React.useEffect(() => {
+    user.awaitInitialized().then(() => {
+      enforceLogin()
+      setIsInitialized(true)
+      setRenderNav(isSignedIn)
+    })
+  }, [])
+
+  React.useEffect(() => {
+    enforceLogin()
+  }, [isSignedIn, location.pathname])
 
   return (
     <div className="flex flex-row w-full h-full">

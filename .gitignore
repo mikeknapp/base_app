@@ -1,5 +1,6 @@
 # Firebase
 functions/venv/**
+/.firebase/**
 
 # Logs
 logs
